@@ -6,7 +6,7 @@
     <title>Profile</title>
     <link rel="stylesheet" href="{{ asset('asset/edit-profil.css') }}">
 </head>
-<body>
+<body style="background-image: url({{ asset('asset/bumi.jpeg') }}); background-repeat: repeat; background-size: 33.33% 33.33%; width: 100%; height: 100vh;">
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-image">

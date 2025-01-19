@@ -21,8 +21,19 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
+    protected static function booted()
+    {
+        // Automatically set the role to 'user' for new users
+        static::creating(function ($user) {
+            if (is_null($user->role)) {
+                $user->role = 'user';
+            }
+        });
+    }
+    
     /**
      * The attributes that should be hidden for serialization.
      *

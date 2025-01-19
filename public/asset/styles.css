@@ -222,3 +222,20 @@ html {
     background-color: rgba(255, 255, 255, 0.2); /* Efek hover */
     border-radius: 5px; /* Membuat sudut membulat */
 }
+
+/* Additional CSS */
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link {
+    color: white;
+    font-size: 1.2rem; /* Adjust size as needed */
+    text-decoration: none;
+    margin-right: 1rem; /* Space between link and icon */
+}
+
+.navbar-link:hover {
+    color: var(--primary-color); /* Optional hover effect */
+}

@@ -9,10 +9,19 @@
 <body>
     <nav class="navbar">
         <h1>Pasar Sampah BLM</h1>
-        <a href="/menu" class="hamburger">
-            &#9776; 
-        </a>
+        <div class="navbar-links">
+            
+            @if (Auth::check() && Auth::user()->role == 'admin')
+                <a href="{{ route('galeri.index')}}" class="navbar-link">Galeri</a>
+            @else
+                <a href="{{ route('galeri.tampil') }}" class="navbar-link">Galeri</a>         
+            @endif 
+
+
+            <a href="/menu" class="hamburger">&#9776;</a>
+        </div>
     </nav>
+    
 
     <section class="hero">
         <h2>Ubah Sampah Menjadi Kekayaan</h2>
